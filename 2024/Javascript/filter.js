@@ -6,4 +6,8 @@ const output = arr.filter((x)=>{
     return x % 2 
 })
 
-console.log(output);
+const output2 = arr.filter(item=>item == 3)
+
+const mapOutput = arr.map(item=>item == 3)
+console.log(mapOutput);
+
