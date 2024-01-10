@@ -6,7 +6,7 @@ const isPowerOfThree = (num) =>{
     }
 
     const log3 = Math.log10(num) / Math.log10(3);
-    console.log()
+    console.log("check")
 
   // Check if the result is an integer
   return Number.isInteger(log3);
