@@ -24,7 +24,12 @@ var b = function (){
 //named Function Expressions
 
 var c = function xyz(){
-console.log(xyz)
+ let x = 5;
+ var y = 6;
+
+ if(x++ === --y){
+  console.log("Yes")
+ } else{ console.log("No")}
 }
-// c()
+c()
 
