@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Substring Search Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    h3 {
+      color: #555;
+      margin-top: 20px;
+    }
+
+    .box {
+      display: inline-block;
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fafafa;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden; /* Hide overflow to clip the animation */
+      background-color: #e0f7fa;
+    }
+
+    .highlight {
+      background-color: yellow;
+      transition: background-color 1s ease-out; /* Animation transition */
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Substring Search Example</h2>
+    
+    <h3>Strings:</h3>
+    <input type="text" id="stringInput" placeholder="Enter String 1">
+    <input type="text" id="substringInput" placeholder="Enter Substring">
+    <button onclick="executeCode()">Execute Code</button>
+
+    <h3>Code Logic:</h3>
+    <textarea id="codeLogic">
+function findSubstringIndex(str, substr) {
+  // Your KMP-based substring search code here
+}
+    </textarea>
+
+    <h3>Result:</h3>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function executeCode() {
+      const string1 = document.getElementById("stringInput").value;
+      const substring = document.getElementById("substringInput").value;
+      const code = document.getElementById("codeLogic").value;
+      eval(code); // Warning: Using eval is generally not recommended due to security risks.
+      
+      let resultIndex = findSubstringIndex(string1, substring);
+
+      document.getElementById("output").innerHTML = resultIndex !== -1
+        ? `Substring found at index: ${resultIndex}`
+        : "Substring not present";
+
+      const elementId = "output";
+      const length = substring.length;
+      if (resultIndex !== -1) {
+        highlightSubstring(elementId, resultIndex, length);
+      }
+      displayArray(elementId, string1.split(''));
+    }
+
+    function highlightSubstring(elementId, startIndex, length) {
+      const element = document.getElementById(elementId);
+      const spans = element.querySelectorAll('.box');
+      
+      for (let i = startIndex; i < startIndex + length; i++) {
+        spans[i].classList.add('highlight');
+      }
+    }
+
+    function displayArray(elementId, array) {
+      const element = document.getElementById(elementId);
+      element.innerHTML = ''; // Clear previous content
+
+      const arrayHtml = array.map((char, index) => `<span class="box">${index}: ${char}</span>`).join('');
+      element.innerHTML = arrayHtml;
+    }
+  </script>
+</body>
+</html>
