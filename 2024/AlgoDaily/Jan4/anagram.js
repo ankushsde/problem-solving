@@ -6,9 +6,14 @@ const isAnagram = (str1, str2) => {
         return false;
      }
 
-     const sortedStr1 = clearStr1.split('').sort().join('')
+     const sortedStr1 = clearStr1
+     .split('')
+     .sort()
+     .join('')
+     console.log(sortedStr1)
+
      const sortedStr2 = clearStr2.split('').sort().join('')
-    return sortedStr1 === sortedStr2
+    // return sortedStr1 === sortedStr2
 }
 
-console.log(isAnagram("cinema", "iceman"));  // Should return true
+console.log(isAnagram("cin ema", "iceman"));  // Should return true

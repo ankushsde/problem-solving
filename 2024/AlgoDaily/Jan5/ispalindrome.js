@@ -12,4 +12,15 @@ let isPalindrome = (str) => {
   return sortedstr === sortedReversedStr
 }
 
-console.log(isPalindrome(str))
+
+let checkPalindrome = ()=>{
+  let n = str.length
+  let reversedArr = []
+  let cleanStr = str.replace(/[^a-zA-Z0-9]/g,'') 
+  for(let i= n-1; i>=0;i--){
+    reversedArr.push(cleanStr[i])
+  }
+ 
+ return cleanStr===reversedArr.join('').toLowerCase()
+}
+console.log(checkPalindrome(str))
