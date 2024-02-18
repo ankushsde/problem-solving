@@ -28,7 +28,7 @@ const findProduct = (arr) => {
     result[i]= prefix[i]*suffix[i]
    }
 
-   return prefix
+   return result
 
 };
 
