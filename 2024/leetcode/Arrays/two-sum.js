@@ -2,6 +2,8 @@ let arr = [2,11,7,15]
 
 let n = arr.length
 
+
+
 const twoSum = (arr,n) =>{
     // let target = 9
     // let sumarr = []
