@@ -17,4 +17,26 @@ const rotateArr = (arr, k, n) => {
   return arr;
 };
 
+
+// TC: O(n) , SC= k
 console.log(rotateArr(arr, k, n));
+
+// function reverseFnc (arr,start,end){
+//   while (start<=end){
+//    let temp = arr[start]
+//    arr[start] = arr[end]
+//    arr[end] = temp
+//    start++;
+//    end--;
+//   }
+// }
+
+const rotateArr2 = (a, k, n) => {
+  k = k % n;
+  a.reverse(a,a+k)
+  a.reverse(a+k,a+n)
+  a.reverse(a,a+n)
+  return a
+};
+
+console.log(rotateArr2(arr, n, k))
