@@ -18,7 +18,7 @@ function solution1(s) {
 
 //Optimised Approach : Using Two pointers
 
-function solution2() {
+function solution2() {github
 
     
   if (str.length === 0) return 0;
