@@ -18,8 +18,7 @@ function solution1(s) {
 
 //Optimised Approach : Using Two pointers
 
-function solution2() {github
-
+function solution2() { 
     
   if (str.length === 0) return 0;
   let maxans = Number.MIN_SAFE_INTEGER;
