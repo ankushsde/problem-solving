@@ -1,4 +1,4 @@
-//Brute force
+//Brute force : TC: o(n*m)* (n+m)+(n*m)
 
 
 function markRow(matrix, n, m, i) {
@@ -55,4 +55,34 @@ function markRow(matrix, n, m, i) {
   for (let i = 0; i < n; i++) {
     console.log(ans[i].join(" "));
   }
+
+// Better Approach  time complexity  :O(n^2)
+//We create row and col of length n and m and mark them 0 initially and once we found any 0 in a 
+// particular row or column, we'll mark them as 1
+//after that, we'll run a nested for loop, where if(row[i] || col[j] === 1) we'll mark the matrix, 
+// row's and columns as 0
+
+function zeroMatrix2(matrix, n, m) {
+    let row = Array(n).fill(0);
+    let col = Array(m).fill(0);
+ 
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (matrix[i][j] === 0) {
+                row[i] = 1;
+                col[j] = 1;
+            }
+        }
+    }
+ 
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (row[i] === 1 || col[j] === 1) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+ 
+    return matrix;
+ }
 
