@@ -58,6 +58,5 @@ int main() {
     // cout<<head->data;
     cout<<lengthOfLL(head);
     
-    
     return 0;
 }
