@@ -22,3 +22,7 @@ while (!q.empty()) {
 }
 
 return bfs;
+
+// TC: O(n) + O(2E) runs on all degrees
+//SC : O(3N) close to O(N), Queue, + bfs liset, and + the visited node one
+
