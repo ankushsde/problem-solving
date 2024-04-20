@@ -69,3 +69,41 @@ public:
 }
 };
 
+
+// 
+/****************************************************************
+ 
+    Following is the class structure of the Node class:
+
+        class Node
+        {
+        public:
+	        int data;
+	        Node *next;
+	        Node(int data)
+	        {
+		        this->data = data;
+		        this->next = NULL;
+	        }
+        };
+
+*****************************************************************/
+
+#include <bits/stdc++.h>
+
+void printReverse(Node *head)
+{
+    stack<int> st;
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        st.push(temp->data);
+        temp = temp->next;
+    }
+    while (!st.empty())
+    {
+        cout << st.top() << " ";
+        st.pop();
+    }
+}
+
