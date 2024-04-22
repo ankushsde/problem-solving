@@ -72,3 +72,17 @@ int frogJump(int n, vector<int> &heights)
     return prev;
 }
 
+// IN case of K Jumps -> recursive way 
+
+f(ind){
+    if(ind == 0) return 0;
+    mmsteps = INT_MAX;
+
+    for(int j = 1; j<=k; j++){
+        if(ind-j >=0) {
+            jmp = f(ind-k)+abs(a[ind]-a[ind-k]);
+            mmsteps = min(mmsteps,jmp);
+        } 
+    }
+    return mmsteps;
+}
