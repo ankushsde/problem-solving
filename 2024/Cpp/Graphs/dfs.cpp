@@ -6,7 +6,7 @@ class Solution {
 
 private : 
 
-void dfs(int node, vector<int> adj[], int vis[], vector<int> &ls){
+void dfs(int node, vector<int> &adj[], int vis[], vector<int> &ls){
  
  vis[node] = 1;
  ls.push_back(node);
