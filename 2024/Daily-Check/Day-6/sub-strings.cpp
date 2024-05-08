@@ -20,7 +20,7 @@ vector<string> breakString(const string& s, int k) {
         
          result.push_back(s.substr(start, end - start));
         
-         start = end + 1;
+        start = end + 1;
         end = start + k;
     }
     
