@@ -1,40 +1,51 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+
+// Approch, using basic math where we'll be taking care of carry
+// TC: Max of (n1,n2), because we're going to travere the largest ofthe linkedlist 
+// SC: O(max of (n1,n2))
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* dummyHead = new ListNode(-1); // Changed Node to ListNode
-        ListNode* curr = dummyHead;
-        ListNode* t1 = l1;
-        ListNode* t2 = l2;
+        ListNode* dummy = new ListNode();
+        ListNode* temp = dummy;
         int carry = 0;
-
-        while(t1 != NULL || t2 != NULL){
-            int sum = carry;
-            if(t1) sum += t1 ->val;
-            if(t2) sum += t2 ->val;
-
-            ListNode* newNode = new ListNode(sum%10);
+        while(l1 != NULL || l2 != NULL || carry) {
+            int sum = 0; 
+            if(l1 != NULL){
+                sum += l1->val;
+                l1 = l1->next;
+            }
+            if(l2 !=NULL){
+                sum += l2->val;
+                l2 = l2->next;
+            }
+            sum += carry;
             carry = sum/10;
-
-            curr -> next = newNode;
-            curr = curr -> next; 
-
-            if(t1) t1 = t1 -> next; 
-            if(t2) t2 = t2 -> next;
+            ListNode* node = new ListNode(sum%10);
+            temp->next = node;
+            temp = temp->next;
         }
-        if (carry){ // corrected curly brace placement
-            ListNode* newNode = new ListNode(carry);
-            curr -> next = newNode;
-        }
-        return dummyHead -> next; // corrected return statement
+        return dummy->next;
     }
 };
+
+// psuedo code: 
+// we'll be using a dummy node and will be connecting the result to this node
+// see the numbers can be from 0..9, means we've to take care of carry,
+// initialize carry and sum variable to store the result as 0, for every iteration the sum will become zero. 
+// loop untill we have elements present in list1 or list list 2 or we have a carry
+// check if(list1 !=NULL){
+// //add list1->value to sum;
+// // keep it moving // list1 = list1->next 
+// }
+// same for list 2, 
+
+// add carry in ths sum, if it is 
+// sum += carry;
+// carry = sum/10;
+// we'll need a new node, which we'll assigning to node next, 
+// node = new Node (sum%10);
+// temp->next = node;
+// temp = temp->next;
+
+// Return dummynode ->next
