@@ -1,14 +1,5 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+// revisited : once 
+
 class Solution {
 public:
   
@@ -27,10 +18,10 @@ public:
     }
 };
 
-
+// TC: O(N), SC:O(N)
 // these are kinda similars, just remeber this :
 
-//INorder- left root right
+//inorder- left root right
 //preorder - root left right
 //post order - left right root 
 

@@ -18,12 +18,26 @@ const res = obj.z();
 // const is super strict, allows nothing
 
 function hoistedFunction(){ 
-  console.log(" Hello world! ",name);
+  // console.log(" Hello world! ",name);
 }
 var name ="Ankush"
 var name = "Shippi"
 hoistedFunction();  
 
 // time between hoisting and initialization of let variable is known as temporal dead zone. 
+
+//This keyword
+// this keyword refers to the current context or scope within which the code is executing, it's value is
+// determined by how a fucntion is called, 
+
+// Closures : functions bundled together with its lexical scope
+// examples : Currying, memoization, setTimeouts
+
+// Prototype inheritance: 
+// Inheritance in js is quite different, 
+// JS engine attaches our created objects with hidden properties, also for functions, etc:
+// attaches an object to the original object. 
+// prototype attaches objects
+ 
 
 
