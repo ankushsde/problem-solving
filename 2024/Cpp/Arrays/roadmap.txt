@@ -1,0 +1,15 @@
+Arrays: 
+1) Intervals
+2) longest subarray, subsequences
+3) Matrix: set zero, rotate
+4) Two pointers and sliding window pattern
+
+
+Binary Trees:
+1) Traversal Techniques, IN, PRE, POST--> using recursion
+2) Level order Traversal
+3) Questions based on these traversals
+4) verticalTraversal, max width
+
+
+

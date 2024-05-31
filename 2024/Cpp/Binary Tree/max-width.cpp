@@ -1,14 +1,20 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+// //  Approach, using Level order traversal
+// Max width of the tree
+// what if we find out the maximum width at each level ? 
+
+// :: // edge cases :  
+// :: // approach : last -first + 1
+// we'll find the width at each level, using variables like first and last, where first pointing to ind == 0, last = size -1 at each level,
+// use a queue to store all teh nodes and the index attched to them. initiallly q.push({root,0}) 
+// on every level we'll find the minimum Index to avoid overflow condition, 
+// int mmin = q.front().second;
+// loop through the queue, and keep updating the ans = max(ans, last-first+1)
+
+// :: // TC & SC :  O(N) + O(N)
+// :: // code : 
+
+// revisited once
+
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
@@ -38,18 +44,8 @@ public:
          return ans;
     }
  };
+ 
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
