@@ -1,8 +1,8 @@
 Arrays: 
-1) Intervals
-2) longest subarray, subsequences
-3) Matrix: set zero, rotate
-4) Two pointers and sliding window pattern
+Pattern subarray ::: 
+1) Maximum Product subarray
+2) Maximum Sum subarray
+
 
 
 Binary Trees:
