@@ -21,17 +21,40 @@ int maxProductSubArray(vector<int>& nums) {
 
 //Can be trimmed down to N^2, because everytime we're multiplying with new num, and what if we multiply next element with the product 
 
-int maxProductSubArray(vector<int>& nums) {
-    int n  = nums.size();
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+      int n  = nums.size();
     int maxi = INT_MIN;
     for(int i = 0; i< n; i++){
-           int product = 1;
+        int product = 1;
         for(int j = i ; j< n; j++){
-        product = product * nums[k];
+            product = product * nums[j];
+            maxi = max(maxi,product);
         }
-         maxi = max(maxi,product);
     }
     return maxi;
-}
+    }
 
-// Otimal::::  using Kadane's algo
+};
+// Otimal::::  using prefix and sufix based on intution 
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int n = nums.size();
+      int maxi = INT_MIN;
+      int pref = 1;
+      int suff = 1;
+      for(int i = 0; i<n; i++){
+        if(pref == 0) pref = 1;
+        if(suff == 0) suff = 1;
+
+        pref = pref * nums[i];
+        suff = suff * nums[n-i-1];
+
+        maxi = max(maxi, max(pref,suff));
+      }
+      return maxi;
+    }
+
+};

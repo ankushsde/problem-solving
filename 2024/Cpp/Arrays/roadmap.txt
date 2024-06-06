@@ -1,7 +1,9 @@
 Arrays: 
 Pattern subarray ::: 
+0) Good understanding of sorting algos required
 1) Maximum Product subarray
 2) Maximum Sum subarray
+3) Playing around merge sort, reverse pairs
 
 
 
