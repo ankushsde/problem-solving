@@ -1,7 +1,7 @@
 // Intuition
-// The problem requires finding the top K frequent elements in an array of integers. One approach is to use a map to count the frequency of each element, then sort the elements based on their frequency and return the top K elements.
-// Screenshot (47).png
-
+// The problem requires finding the top K frequent elements in an array of integers. One approach is to use a map to count the 
+// frequency of each element, then sort the elements based on their frequency and return the top K elements.
+ 
 // Approach
 // Initialize an empty map mp to store the frequency of each element.
 // Iterate through the input nums array and update the frequency of each element in the map.
@@ -15,6 +15,7 @@
 // Sorting the vector of pairs: O(n log n)
 // Extracting the top K elements: O(k)
 // Overall, the time complexity is O(n log n), where n is the size of the input array nums.
+
 // Space complexity :
 // Additional space used for the map and the vector of pairs: O(n)
 // Space required for the result vector: O(k)
@@ -29,7 +30,9 @@ public:
         map<int,int>mp;
         for(int i=0;i<nums.size();i++)
             mp[nums[i]]++;
+
         vector<pair<int,int>>v;
+
         for(auto it : mp )
             v.push_back(make_pair(it.second,it.first));
         sort(v.rbegin(),v.rend());
