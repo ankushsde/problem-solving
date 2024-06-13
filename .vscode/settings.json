@@ -15,5 +15,6 @@
         "*.tcc": "cpp",
         "bitset": "cpp",
         "utility": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
