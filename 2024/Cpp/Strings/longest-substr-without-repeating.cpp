@@ -1,3 +1,8 @@
+
+// Brute force: 
+// Generating all the possible substrings
+
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
