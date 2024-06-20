@@ -2,7 +2,7 @@
 
 // TC: by using recursion-->>exponential nature , by using dp, it'll be O(n^2), 
 // best approach by using Binary Search : O(n) * O(logn), SC: O(1)
-
+// revisted 
 #include <bits/stdc++.h>
 using namespace std;
 
