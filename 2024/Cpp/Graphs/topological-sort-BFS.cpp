@@ -1,3 +1,8 @@
+// DAG
+// we'll be using INDEGREE TO TRACK THE INCOMING EDGES OF THE NODE
+// STEP: 1 , insert all the nodes with indegree 0 to Queue
+// STEP: 2 , take out the nodes from q  
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -5,13 +10,14 @@ class Solution {
 public:
 	vector<int> topo(int N, vector<int> adj[]) {
         queue<int> q; 
-	    vector<int> indegree(N, 0); 
+	    vector<int> indegree(N, 0);
+		// make indegree count 
 	    for(int i = 0;i<N;i++) {
 	        for(auto it: adj[i]) {
 	            indegree[it]++; 
 	        }
 	    }
-	    
+	    // insert all the nodes with indegree 0 to be q;
 	    for(int i = 0;i<N;i++) {
 	        if(indegree[i] == 0) {
 	            q.push(i); 
@@ -33,6 +39,8 @@ public:
 	}
 };
 
+// Time comp: 
+// SC: O(n)
 
 
 int main()

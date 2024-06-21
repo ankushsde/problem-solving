@@ -1,31 +1,26 @@
-// subarray means : contigous part of the array
-// subsequence : can be non-contigous part of an array 
-
-// Brute force
-// Approach: 
-
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
 using namespace std;
+
 vector<int> findContiguous(vector<int> &arr, int k) {
     vector<int> res;
     int n = arr.size();
     int start = 0, end = 0, sum = 0;
 
     while (end < n) {
-        sum += arr[end]; // 10
+        sum += arr[end];
         
-        while (sum > k) {   // yes, yes, 10 is greater than 9
-            sum -= arr[start]; // remove first element from the sum, sum = 9 
-            start++; // start is at 1 now
+        while (sum > k) {
+            sum -= arr[start];
+            start++;
         }
         
-        if (sum == k) { // yes sum is equal now to k
+        if (sum == k) {
             for (int i = start; i <= end; i++) {
                 res.push_back(arr[i]);
             }
             return res;
-        } 
+        }
         
         end++;
     }
