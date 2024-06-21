@@ -1,8 +1,8 @@
+// revisited , need to look on code again
+
+
 #include <bits/stdc++.h>
 using namespace std;
-
-
-
 
 class Solution
 {
@@ -48,6 +48,7 @@ public:
                 adjT[it].push_back(i);
             }
         }
+        
         int scc = 0;
         while (!st.empty()) {
             int node = st.top();
