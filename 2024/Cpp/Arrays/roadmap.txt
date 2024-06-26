@@ -1,9 +1,17 @@
-Arrays: 
-Pattern subarray ::: 
-0) Good understanding of sorting algos required
-1) Maximum Product subarray
-2) Maximum Sum subarray
-3) Playing around merge sort, reverse pairs
+Arrays:::::::::::::: 
+--> subarray? 
+Good understanding of sorting algos required
+Maximum Product subarray
+Maximum Sum subarray
+Playing around merge sort, reverse pairs
+
+--> permuations? 
+how to generate permutaions? using rcursion ? 
+prmutations in string, arrays, combination sum
+no dupplicate permuatation please. 
+are using extra space, using swaping? 
+next permutation?  glad point with c++ STL next_permutation
+kth permutation ? 
 
 
 
