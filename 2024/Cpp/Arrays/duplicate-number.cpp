@@ -1,3 +1,4 @@
+// revisted
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
@@ -33,7 +34,8 @@ public:
         
         // return -1; 
      
-     //hasing 
+     //hashing 
+
      int hash[n+1];
     //   for(int i = 0; i<=n; i++){
     //     hash[i]= 0;
@@ -47,4 +49,21 @@ public:
     //   return 0;
 
     }
+
+    vector<int> duplicates(vector<int>& nums) {
+      vector<int> ans;
+      int n = nums.size();
+      
+      unordered_map<int, int> hash;
+     
+      for(int i = 0; i<n; i++){
+          hash[nums[i]]++;
+          if(hash[nums[i]] > 1 ){
+              ans.push_back(nums[i]);
+          }
+      }
+      return ans;
+ }
 };
+
+// O(n) ::: TC ,,,, O(n) :::: SC

@@ -1,3 +1,5 @@
+// revisted 
+
 //Brute 
 //Doing linearly, checking if the i+1 exists, if yes increment count
 //initially the longest is 0 as well as count will be 0
