@@ -14,7 +14,7 @@ public:
                     nextGreater = nums2[j];
                     break;
                 }
-            }
+            }8
             nextGreaterArr.push_back(nextGreater);
         }
         
